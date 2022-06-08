@@ -1,0 +1,15 @@
+{
+  "name": "ar-tags",
+  "version": "0.1.0",
+  "description": "001 - AR Tag",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "FIIGMNT",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "serverless-http": "^2.7.0"
+  }
+}
