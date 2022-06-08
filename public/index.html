@@ -13,16 +13,29 @@
     <a-scene
       embedded=""
       vr-mode-ui="enabled: false"
+      light="defaultLightsEnabled: false"
       arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
     >
-
-    <a-assets>
-      <a-asset-item id="woman" src="https://ar-tag.herokuapp.com/woman.glb"></a-asset-item>
-    </a-assets>
+      <a-assets>
+        <a-asset-item
+          id="woman"
+          src="https://ar-tag.herokuapp.com/woman.glb"
+        ></a-asset-item>
+      </a-assets>
 
       <a-marker type="barcode" value="6">
-      
-        <a-entity gltf-model="#woman" position="0 1 0" rotation="270 0 0"></a-entity>
+        <a-entity light="type: ambient; color: #ff00c8"></a-entity>
+        <!-- <a-entity
+          light="type: directional; color: #FFF; intensity: 0.6"
+          position="-0.5 1 1"
+        ></a-entity> -->
+
+        <a-entity
+          gltf-model="#woman"
+          position="0 1 0"
+          rotation="270 0 0"
+          scale="2 2 2"
+        ></a-entity>
         <!-- <a-entity position="0 1 0" rotation="270 0 0">
           <a-image
             width="10"
